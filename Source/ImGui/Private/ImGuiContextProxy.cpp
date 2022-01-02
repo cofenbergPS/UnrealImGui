@@ -36,8 +36,13 @@ namespace
 
 	FString GetIniFile(const FString& Name)
 	{
+#if PLATFORM_SWITCH
+		// TODO(co): For now no ImGui saving on the Nintendo Switch platform, "ImFileOpen()" needs to use Nintendo Switch platform specific functions
+		return FString();
+#else
 		static FString SaveDirectory = GetSaveDirectory();
 		return FPaths::Combine(SaveDirectory, Name + TEXT(".ini"));
+#endif
 	}
 
 	struct FGuardCurrentContext

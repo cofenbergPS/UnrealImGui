@@ -61,7 +61,7 @@ public:
 
 
 /** Enable to support legacy ImGui delegates API. */
-#define IMGUI_WITH_OBSOLETE_DELEGATES 1
+#define IMGUI_WITH_OBSOLETE_DELEGATES 0
 
 #if IMGUI_WITH_OBSOLETE_DELEGATES
 

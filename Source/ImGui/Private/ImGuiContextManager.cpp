@@ -60,6 +60,10 @@ namespace
 FImGuiContextManager::FImGuiContextManager(FImGuiModuleSettings& InSettings)
 	: Settings(InSettings)
 {
+#if !PLATFORM_SWITCH
+	FontAtlas.AddFontFromFileTTF(TCHAR_TO_ANSI(*(FPaths::EngineContentDir() / "Slate/Fonts/Roboto-Regular.ttf")), 14);
+#endif
+
 	Settings.OnDPIScaleChangedDelegate.AddRaw(this, &FImGuiContextManager::SetDPIScale);
 
 	SetDPIScale(Settings.GetDPIScaleInfo());

@@ -182,19 +182,19 @@ protected:
 	// This defines initial behaviour which can be later changed using 'ImGui.ToggleKeyboardInputSharing' command or
 	// module properties interface.
 	UPROPERTY(EditAnywhere, config, Category = "Input")
-	bool bShareKeyboardInput = false;
+	bool bShareKeyboardInput = true;
 
 	// Whether ImGui should share gamepad input with game.
 	// This defines initial behaviour which can be later changed using 'ImGui.ToggleGamepadInputSharing' command or
 	// module properties interface.
 	UPROPERTY(EditAnywhere, config, Category = "Input")
-	bool bShareGamepadInput = false;
+	bool bShareGamepadInput = true;
 
 	// Whether ImGui should share mouse input with game.
 	// This defines initial behaviour which can be later changed using 'ImGui.ToggleMouseInputSharing' command or
 	// module properties interface.
 	UPROPERTY(EditAnywhere, config, Category = "Input")
-	bool bShareMouseInput = false;
+	bool bShareMouseInput = true;
 
 	// If true, then in input mode ImGui will draw its own cursor in place of the hardware one.
 	// When disabled (default) there is a noticeable difference between cursor position seen by ImGui and position on
@@ -305,8 +305,8 @@ private:
 	FImGuiKeyInfo ToggleInputKey;
 	FImGuiCanvasSizeInfo CanvasSize;
 	FImGuiDPIScaleInfo DPIScale;
-	bool bShareKeyboardInput = false;
-	bool bShareGamepadInput = false;
-	bool bShareMouseInput = false;
+	bool bShareKeyboardInput = true;
+	bool bShareGamepadInput = true;
+	bool bShareMouseInput = true;
 	bool bUseSoftwareCursor = false;
 };

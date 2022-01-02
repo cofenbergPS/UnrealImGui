@@ -467,7 +467,7 @@ void SImGuiWidget::UpdateInputState()
 			ReturnFocus();
 		}
 	}
-	else if(bInputEnabled)
+	else if (bInputEnabled && !Properties.IsMouseInputShared())
 	{
 		const auto& ViewportWidget = GameViewport->GetGameViewportWidget();
 

@@ -73,14 +73,14 @@ public:
 
 private:
 
-	bool bInputEnabled = false;
+	bool bInputEnabled = true;
 
 	bool bKeyboardNavigationEnabled = false;
 	bool bGamepadNavigationEnabled = false;
 
-	bool bKeyboardInputShared = false;
-	bool bGamepadInputShared = false;
-	bool bMouseInputShared = false;
+	bool bKeyboardInputShared = true;
+	bool bGamepadInputShared = true;
+	bool bMouseInputShared = true;
 
 	bool bShowDemo = false;
 };

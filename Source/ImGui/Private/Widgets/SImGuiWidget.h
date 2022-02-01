@@ -147,7 +147,7 @@ private:
 
 	float DPIScale = 1.f;
 
-	bool bInputEnabled = true;
+	bool bInputEnabled = false;
 	bool bForegroundWindow = false;
 	bool bHideMouseCursor = true;
 	bool bTransparentMouseInput = false;

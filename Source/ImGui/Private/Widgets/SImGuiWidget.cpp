@@ -388,7 +388,7 @@ void SImGuiWidget::TakeFocus()
 	if (ULocalPlayer* LocalPlayer = GetLocalPlayer())
 	{
 		TSharedRef<SWidget> FocusWidget = SharedThis(this);
-		LocalPlayer->GetSlateOperations().CaptureMouse(FocusWidget);
+		//LocalPlayer->GetSlateOperations().CaptureMouse(FocusWidget);
 		LocalPlayer->GetSlateOperations().SetUserFocus(FocusWidget);
 	}
 	else
@@ -408,7 +408,7 @@ void SImGuiWidget::ReturnFocus()
 		if (ULocalPlayer* LocalPlayer = GetLocalPlayer())
 		{
 			auto FocusWidgetRef = FocusWidgetPtr.ToSharedRef();
-			LocalPlayer->GetSlateOperations().CaptureMouse(FocusWidgetRef);
+			//LocalPlayer->GetSlateOperations().CaptureMouse(FocusWidgetRef);
 			LocalPlayer->GetSlateOperations().SetUserFocus(FocusWidgetRef);
 		}
 		else
